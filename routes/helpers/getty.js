@@ -4,7 +4,7 @@ var https = require('https');
 
 
 console.log("In getty!!!!!!!!!!!!"); 
-console.log("api key: " + (process.env.GETTY_API_KEY || 'a2nx44jnc2tatmpvdk4b2zgg')); 
+console.log("api key: " + process.env.GETTY_API_KEY); 
 
 const options = {
     hostname: "api.gettyimages.com", 
@@ -12,7 +12,7 @@ const options = {
     path: '/v3/search/images?fields=comp',
     method: 'GET', 
     headers: {
-        'Api-Key': process.env.GETTY_API_KEY || 'a2nx44jnc2tatmpvdk4b2zgg'
+        'Api-Key': process.env.GETTY_API_KEY
     }
 }; 
 
